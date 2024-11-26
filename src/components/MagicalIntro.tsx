@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Sparkles, Stars, Gift } from 'lucide-react';
+import { Heart, Sparkles, Stars } from 'lucide-react';
 import { useParallax } from 'react-scroll-parallax';
 import Marquee from 'react-fast-marquee';
 import ReactConfetti from 'react-confetti';
@@ -86,7 +86,7 @@ export const MagicalIntro: React.FC<Props> = ({ onPortalOpen }) => {
             }}
             style={{ backgroundSize: '200% auto' }}
           >
-            Mon Amour
+            Mon Coco d'amour
           </motion.span>
         </motion.h1>
 
@@ -116,25 +116,25 @@ export const MagicalIntro: React.FC<Props> = ({ onPortalOpen }) => {
             className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-full transition-all duration-300 group"
           >
             <span className="flex items-center gap-2">
-              Découvre notre histoire
+              Découvre ton histoire
               <Stars className="group-hover:rotate-90 transition-transform duration-300" />
             </span>
           </motion.button>
 
-          <motion.button
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.5, delay: 1.7 }}
-            onClick={onPortalOpen}
-            className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full transition-all duration-300 group"
-          >
-            <span className="flex items-center gap-2">
-              Ouvre le portail magique
-              <Gift className="group-hover:rotate-12 transition-transform duration-300" />
-            </span>
-          </motion.button>
+          {/*<motion.button*/}
+          {/*  initial={{ y: 20, opacity: 0 }}*/}
+          {/*  animate={{ y: 0, opacity: 1 }}*/}
+          {/*  whileHover={{ scale: 1.1 }}*/}
+          {/*  whileTap={{ scale: 0.95 }}*/}
+          {/*  transition={{ duration: 0.5, delay: 1.7 }}*/}
+          {/*  onClick={onPortalOpen}*/}
+          {/*  className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full transition-all duration-300 group"*/}
+          {/*>*/}
+          {/*  <span className="flex items-center gap-2">*/}
+          {/*    Ouvre le portail magique*/}
+          {/*    <Gift className="group-hover:rotate-12 transition-transform duration-300" />*/}
+          {/*  </span>*/}
+          {/*</motion.button>*/}
         </div>
       </div>
 

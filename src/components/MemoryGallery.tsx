@@ -7,32 +7,72 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import nous from '/assets/cocovideo/nousDeux.jpg'
+import nous2 from '/assets/cocovideo/nous1.jpg'
+import debile from '/assets/cocovideo/debile.jpg'
+import lvlb from '/assets/cocovideo/lvlb.jpg'
+import mia from '/assets/cocovideo/mia.jpg'
+import han from '/assets/cocovideo/1.jpg'
+import souffre from '/assets/cocovideo/7.jpg'
+
 
 const memories = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80",
-    title: "Premier café ensemble",
-    date: "14 Février 2023",
-    location: "Café des Artistes",
-    description: "Un moment magique qui restera à jamais gravé dans nos cœurs..."
+    image: nous,
+    title: "Tema nos tete 🤣🤣",
+    date: "",
+    location: "",
+    description: ""
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80",
-    title: "Paris mon amour",
+    image: nous2,
+    title: "Deux idiots reuinis 🤣",
     date: "15 Mars 2023",
     location: "Tour Eiffel, Paris",
     description: "Notre première escapade romantique dans la ville lumière..."
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
-    title: "Week-end à la mer",
-    date: "1 Avril 2023",
-    location: "Côte d'Azur",
-    description: "Des moments de bonheur simple au bord de l'eau..."
-  }
+    image: debile,
+    title: "Idiote vas 🤣",
+    date: "15 Mars 2023",
+    location: "Tour Eiffel, Paris",
+    description: "Notre première escapade romantique dans la ville lumière..."
+  },
+  {
+    id: 4,
+    image: lvlb,
+    title: "Levez les biceps 🤣",
+    date: "15 Mars 2023",
+    location: "Tour Eiffel, Paris",
+    description: "Notre première escapade romantique dans la ville lumière..."
+  },
+  {
+    id: 5,
+    image: mia,
+    title: "On dirait Mia Khalifa 🤣",
+    date: "15 Mars 2023",
+    location: "Tour Eiffel, Paris",
+    description: "Notre première escapade romantique dans la ville lumière..."
+  },
+  {
+    id: 6,
+    image: han,
+    title: "Haaaaaaa 😭🤣",
+    date: "15 Mars 2023",
+    location: "Tour Eiffel, Paris",
+    description: "Notre première escapade romantique dans la ville lumière..."
+  },
+  {
+    id: 7,
+    image: souffre,
+    title: "Je souffrais seigneur 😭😭",
+    date: "15 Mars 2023",
+    location: "Tour Eiffel, Paris",
+    description: "Notre première escapade romantique dans la ville lumière..."
+  },
 ];
 
 export const MemoryGallery: React.FC = () => {
@@ -59,7 +99,7 @@ export const MemoryGallery: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text"
         >
-          Nos Plus Beaux Souvenirs
+          Les seules photos qu'on a prises ensemble et tes photos les plus débiles
         </motion.h2>
 
         <Swiper
@@ -92,20 +132,12 @@ export const MemoryGallery: React.FC = () => {
                 <img
                   src={memory.image}
                   alt={memory.title}
-                  className="w-full h-[400px] object-cover"
+                  className="w-full h-[600px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent">
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="text-white text-2xl font-bold mb-2">{memory.title}</h3>
                     <div className="flex items-center gap-4 text-white/80">
-                      <div className="flex items-center gap-2">
-                        <Calendar size={16} />
-                        <span>{memory.date}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <MapPin size={16} />
-                        <span>{memory.location}</span>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -144,7 +176,6 @@ export const MemoryGallery: React.FC = () => {
                         <h3 className="text-2xl font-bold text-gray-800">
                           {selectedMemory.title}
                         </h3>
-                        <p className="text-gray-500">{selectedMemory.date}</p>
                       </div>
                       <div className="flex gap-2">
                         <motion.button
@@ -171,11 +202,6 @@ export const MemoryGallery: React.FC = () => {
                           <X size={24} className="text-gray-600" />
                         </motion.button>
                       </div>
-                    </div>
-                    <p className="text-gray-600 mb-4">{selectedMemory.description}</p>
-                    <div className="flex items-center gap-2 text-gray-500">
-                      <MapPin size={20} />
-                      <span>{selectedMemory.location}</span>
                     </div>
                   </div>
                 </div>

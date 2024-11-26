@@ -11,13 +11,11 @@ import { SpecialMoments } from './components/SpecialMoments';
 import { MusicMemories } from './components/MusicMemories';
 import { FinaleSurprise } from './components/FinaleSurprise';
 import { VideoGallery } from './components/VideoGallery';
-import { InteractiveGallery } from './components/InteractiveGallery';
 import { InteractiveMemories } from './components/InteractiveMemories';
 import { VideoMemories } from './components/VideoMemories';
 import { useWindowSize } from 'react-use';
 import Particles from 'react-particles';
 import { loadFull } from "tsparticles";
-import { MagicPortal } from './components/MagicPortal';
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -73,12 +71,6 @@ function App() {
           className="absolute inset-0 pointer-events-none"
         />
 
-        <AnimatePresence>
-          {showPortal && (
-            <MagicPortal onClose={() => setShowPortal(false)} />
-          )}
-        </AnimatePresence>
-
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -95,12 +87,9 @@ function App() {
 
           <InteractiveMemories />
           <VideoMemories />
-          <InteractiveGallery />
           <MemoryGallery />
           <VideoGallery />
-          <SpecialMoments />
           <MusicMemories />
-          <LoveNotes />
           <FinaleSurprise />
         </motion.div>
 

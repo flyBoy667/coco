@@ -9,21 +9,21 @@ import bebeCoco4 from "/assets/cocovideo/bbcoco4.jpg"
 const memories = [
   {
     date: "14 Février 2023",
-    title: "Notre première rencon",
+    title: "Regarde comme t'es BG sur la photo 😍 ! Sérieusement, t’avais un charme de dingue",
     description: "Ce jour magique où nos regards se sont croisés pour la première fois...",
     location: "Café des Artistes",
     image: bebeCoco2
   },
   {
     date: "1 Mars 2023",
-    title: "Premier rendez-vous",
+    title: "Qui aurait cru que t'allais devenir une ghetto avec ce visage angelique 🤣",
     description: "Une soirée inoubliable remplie de rires et de complicité...",
     location: "Restaurant Le Romantique",
     image: bebeCoco
   },
   {
     date: "15 Avril 2023",
-    title: "Week-end à Paris",
+    title: "Le plus beau sourire que t’aies jamais fait",
     description: "Notre première escapade ensemble dans la ville de l'amour...",
     location: "Paris, France",
     image: bebeCoco4
@@ -39,7 +39,7 @@ export const LoveStory: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text"
         >
-          Notre Histoire d'Amour
+          Bébé Coco
         </motion.h2>
 
         <div className="space-y-16">
@@ -66,22 +66,7 @@ export const LoveStory: React.FC = () => {
               </motion.div>
 
               <div className="flex-1 space-y-4">
-                <div className="flex items-center gap-2 text-pink-500">
-                  <Calendar size={20} />
-                  <span>{memory.date}</span>
-                </div>
-
                 <h3 className="text-3xl font-bold text-gray-800">{memory.title}</h3>
-
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  {memory.description}
-                </p>
-
-                <div className="flex items-center gap-2 text-gray-500">
-                  <MapPin size={20} />
-                  <span>{memory.location}</span>
-                </div>
-
                 <motion.div
                   whileHover={{ scale: 1.2 }}
                   className="inline-block"

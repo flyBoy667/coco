@@ -6,6 +6,13 @@ import darkBeauty from '/assets/cocovideo/darkBeauty.mp4';
 import blood from '/assets/cocovideo/blood.mp4';
 import levresBombees from '/assets/cocovideo/levresbombbees.mp4';
 import mariage from '/assets/cocovideo/Mariage.mp4';
+import outfit from '/assets/cocovideo/outfit.mp4';
+import salopette from '/assets/cocovideo/salopette.mp4';
+import wolof2 from '/assets/cocovideo/wolof2.mp4';
+import afro from '/assets/cocovideo/afro.mp4';
+import couche from '/assets/cocovideo/couchee.mp4';
+import levres from '/assets/cocovideo/grosseLevres.mp4';
+
 
 import {Play, Volume2, VolumeX} from 'lucide-react';
 
@@ -20,34 +27,81 @@ interface Memory {
 
 const memories: Memory[] = [
     {
-        title: "Notre première danse",
+        title: "Dark beauty, Désolée j'avais pas d'inspi 😭",
         description: "Ce moment magique où le monde s'est arrêté autour de nous...",
         videoUrl: darkBeauty,
         thumbnail: "",
         date: "14 Février 2023",
-        location: "Le Grand Bal",
+        location: "Kati, Mali",
     },
     {
-        title: "Voyage à Paris",
+        title: "Le rouge te vas super bien 😍",
         description: "Notre escapade romantique dans la ville lumière...",
         videoUrl: blood,
         thumbnail: "",
         date: "20 Mars 2023",
-        location: "Paris, France",
+        location: "Kati, Mali",
     }, {
-        title: "Voyage à Paris",
+        title: "Ce moment où tu étais bad in love, tu m'envoyais des vidéos en pagaille 😅",
         description: "Notre escapade romantique dans la ville lumière...",
         videoUrl: levresBombees,
         thumbnail: "",
         date: "20 Mars 2023",
-        location: "Paris, France",
+        location: "Kati, Mali",
     }, {
-        title: "Voyage à Paris",
+        title: "Shine like a diamond 💎",
         description: "Notre escapade romantique dans la ville lumière...",
         videoUrl: mariage,
         thumbnail: "",
         date: "20 Mars 2023",
-        location: "Paris, France",
+        location: "Kati, Mali",
+    },
+    {
+        title: "J'ai toujours voulu que tu t'habille comme ça te vas super bien",
+        description: "Notre escapade romantique dans la ville lumière...",
+        videoUrl: outfit,
+        thumbnail: "",
+        date: "20 Mars 2023",
+        location: "Kati, Mali",
+    },
+    {
+        title: "Viens je te mange coco dans cette tenue 🥺",
+        description: "Notre escapade romantique dans la ville lumière...",
+        videoUrl: salopette,
+        thumbnail: "",
+        date: "20 Mars 2023",
+        location: "Kati, Mali",
+    },
+    {
+        title: "La petite indienne 💗",
+        description: "Notre escapade romantique dans la ville lumière...",
+        videoUrl: wolof2,
+        thumbnail: "",
+        date: "20 Mars 2023",
+        location: "Kati, Mali",
+    },
+    {
+        title: "Ta meilleure coupe j'adore 💘",
+        description: "Notre escapade romantique dans la ville lumière...",
+        videoUrl: afro,
+        thumbnail: "",
+        date: "20 Mars 2023",
+        location: "Kati, Mali",
+    },
+    {
+        title: "C'est pas toi qui est belle c'est la beauté qui est toi 🤣🤣",
+        description: "Notre escapade romantique dans la ville lumière...",
+        videoUrl: couche,
+        thumbnail: "",
+        date: "20 Mars 2023",
+        location: "Kati, Mali",
+    }, {
+        title: "On en parle de tes lèvres parfaites ?",
+        description: "Notre escapade romantique dans la ville lumière...",
+        videoUrl: levres,
+        thumbnail: "",
+        date: "20 Mars 2023",
+        location: "Kati, Mali",
     },
 ];
 
@@ -64,7 +118,7 @@ export const VideoMemories = () => {
                     initial={{opacity: 0, y: 20}}
                     animate={{opacity: 1, y: 0}}
                 >
-                    Nos moments en vidéo
+                    Tes plus belles vidéos
                 </motion.h2>
                 <div ref={ref} className="grid md:grid-cols-2 gap-8">
                     {memories.map((memory, index) => (
@@ -110,9 +164,7 @@ export const VideoMemories = () => {
                             <div className="p-6">
                                 <div className="flex justify-between items-start mb-4">
                                     <h3 className="text-2xl font-semibold text-pink-600">{memory.title}</h3>
-                                    <span className="text-sm text-gray-500">{memory.date}</span>
                                 </div>
-                                <p className="text-gray-600 mb-4">{memory.description}</p>
                                 <p className="text-sm text-gray-500">📍 {memory.location}</p>
                             </div>
                         </motion.div>
